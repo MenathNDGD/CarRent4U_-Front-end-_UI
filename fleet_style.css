@@ -90,47 +90,35 @@ nav ul li a:hover, .selected {
     margin-bottom: 30px;
 }
 
-/* Fleet Tabs */
-.fleet_tab {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
+.contHead h3 {
+    font-size: 2.1em;
+    padding-top: 40px;
+    padding-bottom: 5px;
+    text-align: center;
+    border-bottom: 2px solid #33333396;
 }
 
-.fleet_tab .tab_div1 {
-    margin-right: 20px;
-}
-
-.fleet_tab .tab_div1 .btnOne {
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.fleet_tab .tab_div2,
-.fleet_tab .tab_div3 {
-    font-size: 24px;
-}
-
-/* Car Listings */
 .cont4_box {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 0 20px;
+    gap: 20px;
+    padding: 20px 0 20px 0;
 }
 
 .box {
-    background-color: white;
-    width: 300px;
-    margin: 20px;
+    background-color: #38383813;
+	border: 2px solid #747474;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 10px;
     overflow: hidden;
+    max-width: 300px;
+    margin: 20px;
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-10px);
 }
 
 .box .image img {
@@ -139,31 +127,40 @@ nav ul li a:hover, .selected {
 }
 
 .box .content {
-    padding: 20px;
+    padding: 20px 25px;
+    text-align: center;
 }
 
 .box .content h3 {
-    font-size: 20px;
+    font-size: 1.4em;
     margin-bottom: 10px;
 }
 
 .box .content p {
-    font-size: 14px;
-    margin-bottom: 20px;
+    font-size: 1em;
+    margin-bottom: 20px;;
 }
 
-.box .content .btn {
-    display: inline-block;
+.box .btn {
+    background-color: #e67e22;
+    color: #fff;
+    border: none;
     padding: 10px 20px;
-    background-color: #ff8c00;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.box .content .icon {
+.box .btn:hover {
+    background-color: #d35400;
+}
+
+.box .icon {
+    display: flex;
+    justify-content: space-between;
     margin-top: 20px;
+    font-size: 0.9em;
+    color: #616161;
 }
 
 .box .content .icon span {
@@ -172,85 +169,82 @@ nav ul li a:hover, .selected {
     color: #888;
 }
 
-/* Footer */
 footer {
     background-color: #333;
-    color: white;
+    color: #fff;
     text-align: center;
     padding: 40px 20px;
-    margin-top: 40px;
 }
 
-footer .footer-content h3 {
-    font-family: 'Playball', cursive;
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-footer .footer-content p {
-    font-size: 14px;
+.footer_content {
     margin-bottom: 20px;
 }
 
-footer .footer-content .socials {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+.footer_content h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
 }
 
-footer .footer-content .socials li {
+.footer_content h3:hover {
+	color: #e67e22;
+}
+
+.footer_content p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.footer_content .social_links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer_content .social_links li {
     margin: 0 10px;
 }
 
-footer .footer-content .socials li a {
-    color: white;
-    font-size: 20px;
-    text-decoration: none;
+.footer_content .social_links a {
+    font-size: 1.5em;
+    color: #fff;
+    transition: color 0.3s ease;
 }
 
-footer .footer-bottom {
-    font-size: 14px;
+.footer_content .social_links a:hover {
+    color: #e67e22;
 }
 
-/* Back to Top Button */
+.footer_content .social_links li i:hover {
+	transform: scale(1.5);
+}
+
+.footer_bar {
+    border-top: 1px solid #555;
+    padding-top: 20px;
+    font-size: 0.9em;
+}
+
+.footer_bar span {
+    color: #e67e22;
+}
+
 #topBtn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
     display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #329fe7;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-#topBtn i {
-    font-size: 20px;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .bg_image h2 {
-        font-size: 36px;
-    }
-
-    .fleet_tab {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .fleet_tab .tab_div1 {
-        margin-bottom: 20px;
-    }
+#topBtn:hover {
+    background-color: #2980b9;
 }
