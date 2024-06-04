@@ -16,11 +16,12 @@
 		<script src="https://kit.fontawesome.com/ca1bc63871.js" crossorigin="anonymous"></script>
 
 		<!-- jQuery CDN Linked to Webpage -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>	
 	</head>
 
 	<body>
 		<script type="text/javascript" src="main.js"></script>
+		<script type="text/javascript" src="slider.js"></script>
 		<button id="topBtn"><i class="fa-solid fa-chevron-up"></i></button>
 		
 		<nav>
@@ -78,7 +79,7 @@
 
 			<div class="box">
 				<div class="image">
-					<img src="https://www.motortrend.com/uploads/sites/5/2021/08/2022-BMW-5-Series-14.jpg?fit=around%7C875:492.1875" alt="BMW 5 SERIES 525I">
+					<img src="https://www.motortrend.com/uploads/sites/5/2021/08/2022-BMW-5-Series-14.jpg?fit=around%7C875:492.1875" alt="BMW 5 SERIES 525I 2008">
 				</div>
 				<div class="content">
 					<h3>BMW 5 SERIES 525I 2008</h3>
@@ -108,7 +109,7 @@
 
 			<div class="box">
 				<div class="image">
-					<img src="https://www.motortrend.com/uploads/2022/09/2023-Range-Rover-Sport-in-motion-4.jpg" alt="RANGE ROVER SPORT">
+					<img src="https://www.motortrend.com/uploads/2022/09/2023-Range-Rover-Sport-in-motion-4.jpg" alt="RANGE ROVER SPORT 2012">
 				</div>
 				<div class="content">
 					<h3>RANGE ROVER SPORT 2012</h3>
@@ -123,7 +124,7 @@
 
 			<div class="box">
 				<div class="image">
-					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Rolls_Royce_Silver_Dawn_1953_4566cc.JPG/640px-Rolls_Royce_Silver_Dawn_1953_4566cc.JPG">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Rolls_Royce_Silver_Dawn_1953_4566cc.JPG/640px-Rolls_Royce_Silver_Dawn_1953_4566cc.JPG" alt="ROYAL LIMOUSINE 1949">
 				</div>
 				<div class="content">
 					<h3>ROYAL LIMOUSINE 1949</h3>
@@ -160,18 +161,24 @@
 				<h3>WEDDINGS & SPECIAL EVENTS</h3>
 				<h4>WE OFFER A FLEET OF LUXURY WEDDING CARS FOR SPECIAL OCCASIONS & EVENTS</h4>
 				<p>We pledge to treat your special occasions with style and sophistication. Make your day truly unforgettable by selecting from our vast selection of luxury vehicles. We are prepared for weddings and special occasions with a fleet of luxurious wedding cars, ensuring that the day's transportation goes without a hitch and on time.</p>
-
-				<div class="cont1_img">
-					<img src="https://images.unsplash.com/photo-1542036813441-fc9a620d539d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80">
-					<img src="https://gunlakecasino.com/files/8817/0509/5279/Special_Events_GLC_1200x800.jpg">
+			
+				<div class="slider">
+					<button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+					<div class="slider-images">
+						<img src="https://images.unsplash.com/photo-1542036813441-fc9a620d539d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" alt="Specila Event 01">
+						<img src="https://gunlakecasino.com/files/8817/0509/5279/Special_Events_GLC_1200x800.jpg" alt="Specila Event 02">
+						<img src="https://www.kandkinsurance.com/getmedia/05ca80ee-ff86-4b5b-974c-77b9c78512b8/SPECIAL-EVENT-DESKTOP-1340872296_1.jpg" alt="Specila Event 03">
+						<img src="https://www.ice.edu/sites/default/files/styles/width_720/public/content/page/header-image/special-events-page_header_1440x850.jpg.webp?itok=c7lFz5q2" alt="Specila Event 04">
+					</div>
+					<button class="next" onclick="moveSlide(1)">&#10095;</button>
 				</div>
-
+			
 				<p>Our sizable fleet guarantees that there is always a fallback in the event of an unexpected emergency. To ensure that you have the full attention of the vehicle without it having to rush to another function, reservations are made on a "one function a day per car" basis for each car.</p>
-
+			
 				<button type="button" onclick="location.href='aboutUs.html'" class="more_details">More Details</button>
 			</div>
 		</div>
-
+		
 		<footer>
 			<div class="footer_content">
 				<h3><a href="aboutUs.html">CAR RENT4U</a></h3>
