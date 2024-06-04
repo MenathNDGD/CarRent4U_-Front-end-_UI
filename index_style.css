@@ -245,7 +245,53 @@ nav ul li a:hover, .selected {
 	width: 30%;
 }
 
-/* Footer Styles */
+.content4 {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.cont_para1 {
+    text-align: center;
+}
+
+.slider {
+    position: relative;
+    width: 150%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-images img {
+    width: 100%;
+    max-width: 600px;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 217, 255, 0.767);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
 footer {
     background-color: #333;
     color: #fff;
