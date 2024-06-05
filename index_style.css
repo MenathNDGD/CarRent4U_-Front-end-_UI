@@ -34,7 +34,7 @@ nav {
     padding: 10px 15px;
 	position: fixed;
 	width: 100%;
-	
+	z-index: 1;
 }
 
 .logo {
@@ -70,7 +70,7 @@ nav ul li a:hover, .selected {
 }
 
 .bg_image {
-    background-image: url('https://blob.midwaycarrental.com/mrac-media/sites/6/2022/09/home-widget-background.png'); 
+    background-image: url('Images/Home/indexBgImg.png'); 
     background-size: cover;
     background-position: center;
 	height: 20em;
@@ -357,7 +357,7 @@ footer {
     display: none;
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    right: 15px;
     background-color: #329fe7;
     color: #fff;
     border: none;
@@ -475,8 +475,18 @@ footer {
         max-width: 100%;
     }
 
+    .cont2_img img{
+        max-width: 400px;
+        height: auto;
+        padding-top: 2%;
+    }
+
     .content4 .cont1_img img {
         width: 70%;
+    }
+
+    .slider {
+        max-width: 400px;
     }
 
     .footer_content h3 {
@@ -525,6 +535,8 @@ footer {
     .content4 .cont1_img img {
         width: 80%;
     }
+
+    .slider 
 
     .footer_content h3 {
         font-size: 1em;
