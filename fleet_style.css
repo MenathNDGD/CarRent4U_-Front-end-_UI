@@ -71,7 +71,7 @@ nav ul li a:hover, .selected {
 }
 
 .bg_image {
-    background-image: url('Images/Fleet/fleetBgImg.avif'); 
+    background-image: url('Images/Fleet/fleetBgImg.jpg'); 
     background-size: cover;
     background-position: center;
 	height: 20em;
@@ -81,7 +81,7 @@ nav ul li a:hover, .selected {
 }
 
 .bg_image h2 {
-	padding-top: 3%;
+	padding-top: 5%;
     font-size: 3em;
     margin-bottom: 20px;
 }
