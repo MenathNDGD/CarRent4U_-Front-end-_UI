@@ -34,6 +34,7 @@ nav {
     padding: 10px 15px;
 	position: fixed;
 	width: 100%;
+    z-index: 1;
 	
 }
 
@@ -70,7 +71,7 @@ nav ul li a:hover, .selected {
 }
 
 .bg_image {
-    background-image: url('https://cfx-wp-images.imgix.net/2024/03/Fleet-Vehicles-edited.jpg?auto=compress%2Cformat&ixlib=php-3.3.0&s=ce53665b1d05e5f26eb0fa5d0c1d96db'); 
+    background-image: url('Images/Fleet/fleetBgImg.avif'); 
     background-size: cover;
     background-position: center;
 	height: 20em;
@@ -234,7 +235,7 @@ footer {
     display: none;
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    right: 15px;
     background-color: #329fe7;
     color: #fff;
     border: none;
@@ -247,4 +248,71 @@ footer {
 
 #topBtn:hover {
     background-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .bg_image {
+        padding: 80px 0;
+    }
+
+    .bg_image h2 {
+        font-size: 2.5rem;
+    }
+
+    .cont4_box {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .box .image {
+        height: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .bg_image h2 {
+        font-size: 2rem;
+    }
+
+    .bg_image p {
+        font-size: 1rem;
+    }
+
+    .contHead h3 {
+        font-size: 1.5rem;
+    }
+
+    .box .content h3 {
+        font-size: 1.5rem;
+    }
+
+    .box .content p {
+        font-size: 0.9rem;
+    }
+
+    .box .content .btn {
+        font-size: 0.8rem;
+    }
+
+    .box .content .icon span {
+        font-size: 0.8rem;
+    }
+
+    .box .image {
+        height: 120px;
+    }
 }
