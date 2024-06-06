@@ -8,12 +8,18 @@
    		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<link rel="stylesheet" href="subInq_style.css" type="text/css">
-
-		<!-- font awesome cdn link to webpage -->
+		<!-- Font Awesome CDN Linked to Webpage -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script src="https://kit.fontawesome.com/ca1bc63871.js" crossorigin="anonymous"></script>
+
+		<!-- jQuery CDN Linked to Webpage -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     </head>
 
     <body>
+		<script type="text/javascript" src="main.js"></script>
+		<button id="topBtn"><i class="fa-solid fa-chevron-up"></i></button>
 		<nav>
 			<div class="logo" onclick="location.href='index.html'" >Car Rent4U</div>
 				<ul>
@@ -27,7 +33,9 @@
 				</ul>
 		</nav>
 
-		<div class="container">
+		<br><br><br><br>
+
+		<div class="submitCont">
 			<header>Book Your Ride Today!</header>
 			<form action="#">
 				<div class="formFirst">
@@ -51,7 +59,7 @@
 
 							<div class="inputField">
 								<label>Contact Number</label>
-								<input type="number" id="contactNum" name="contactNum" placeholder="Enter Your Contact Number" required="required">
+								<input type="text" id="contactNum" name="contactNum" placeholder="Enter Your Contact Number" required="required">
 							</div> 
 
 							<div class="inputField">
@@ -200,10 +208,10 @@
 		</div>
 
 		<div class="popup" id="popup">
-			<img src="Images\tick.png">
+			<img src="Images/submitInq/tick.png">
 			<h2>Thank You!</h2>
 			<p>Your information has been submitted successfully. <br> For more information, one of our representatives will get in touch with you.</p>
-			<button type="okBtn" onclick="closePopup()">OK</button>
+			<button type="okBtn" onclick="closePopup()"><a href="index.html">Done</a></button>
 		</div>
 
 		<script type="text/javascript">
@@ -216,6 +224,8 @@
 				popup.classList.remove("open-popup");
 			}
 		</script>
+
+		<br><br><br><br>
 
 		<footer>
 			<div class="footer_content">
