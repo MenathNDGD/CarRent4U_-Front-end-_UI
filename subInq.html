@@ -7,31 +7,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="subInq_style.css" type="text/css">
-
-    <!-- Font Awesome CDN Linked to Webpage -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/ca1bc63871.js" crossorigin="anonymous"></script>
-
-	<!-- Leaflet CSS and JavaScript -->
+    <!-- Leaflet CSS and JavaScript -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-    <!-- jQuery CDN Linked to Webpage -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/ca1bc63871.js" crossorigin="anonymous"></script>
+
+    <!-- Google Maps JavaScript API -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+
+    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="subInq_style.css">
+
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 </head>
 
 <body>
-
-	<style>
-        #pickMap,
-        #dropMap {
-            height: 400px;
-            width: 100%;
-            margin-bottom: 20px;
-        }
-    </style>
 
     <script type="text/javascript" src="main.js"></script>
     <button id="topBtn"><i class="fa-solid fa-chevron-up"></i></button>
@@ -201,95 +196,97 @@
 		<img src="Images/submitInq/tick.png">
 		<h2>Thank You!</h2>
 		<p>Your information has been submitted successfully. <br> For more information, one of our representatives will get in touch with you.</p>
-		<button type="okBtn" onclick="closePopup()"><a href="index.html">Done</a></button>
+		<button type="okBtn" onclick="closePopup()"><a href="index.html">Done </a></button>
 	</div>
 
+	<Br><Br><Br>
+	
 	<script type="text/javascript">
-        var pickMap, dropMap;
-        var pickMarker, dropMarker;
+		var pickMap, dropMap;
+		var pickMarker, dropMarker;
 
-        // Initialize maps
-        function initMaps() {
-            // Pick up map
-            pickMap = L.map('pickMap').setView([6.9271, 79.8612], 13); // Example coordinates
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 18,
-                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(pickMap);
+		// Initialize maps
+		function initMaps() {
+			// Pick up map
+			pickMap = L.map('pickMap').setView([6.9271, 79.8612], 13); // Example coordinates
+			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+				maxZoom: 18,
+				attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+			}).addTo(pickMap);
 
-            // Drop off map
-            dropMap = L.map('dropMap').setView([6.9271, 79.8612], 13); // Example coordinates
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 18,
-                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(dropMap);
+			// Drop off map
+			dropMap = L.map('dropMap').setView([6.9271, 79.8612], 13); // Example coordinates
+			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+				maxZoom: 18,
+				attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+			}).addTo(dropMap);
 
-            // Add click event to pickMap
-            pickMap.on('click', function(e) {
-                placeMarker(e.latlng, pickMarker, pickMap, 'pickLoc');
-            });
+			// Add click event to pickMap
+			pickMap.on('click', function(e) {
+				placeMarker(e.latlng, pickMarker, pickMap, 'pickLoc');
+			});
 
-            // Add click event to dropMap
-            dropMap.on('click', function(e) {
-                placeMarker(e.latlng, dropMarker, dropMap, 'dropLoc');
-            });
+			// Add click event to dropMap
+			dropMap.on('click', function(e) {
+				placeMarker(e.latlng, dropMarker, dropMap, 'droLoc'); // Corrected 'dropLoc' to 'droLoc'
+			});
 
-            // Initialize markers
-            pickMarker = L.marker([6.9271, 79.8612], {
-                draggable: true,
-            }).addTo(pickMap);
+			// Initialize markers
+			pickMarker = L.marker([6.9271, 79.8612], {
+				draggable: true,
+			}).addTo(pickMap);
 
-            dropMarker = L.marker([6.9271, 79.8612], {
-                draggable: true,
-            }).addTo(dropMap);
-        }
+			dropMarker = L.marker([6.9271, 79.8612], {
+				draggable: true,
+			}).addTo(dropMap);
+		}
 
-        // Function to place marker
-        function placeMarker(latlng, marker, map, inputId) {
-            marker.setLatLng(latlng);
-            document.getElementById(inputId).value = latlng.lat.toFixed(4) + ', ' + latlng.lng.toFixed(4);
-        }
+		// Function to place marker
+		function placeMarker(latlng, marker, map, inputId) {
+			marker.setLatLng(latlng);
+			document.getElementById(inputId).value = latlng.lat.toFixed(4) + ', ' + latlng.lng.toFixed(4);
+		}
 
-        // Autocomplete for location inputs
-        function setupAutocomplete() {
-            var pickLocInput = document.getElementById('pickLoc');
-            var dropLocInput = document.getElementById('dropLoc');
+		// Autocomplete for location inputs
+		function setupAutocomplete() {
+			var pickLocInput = document.getElementById('pickLoc');
+			var dropLocInput = document.getElementById('droLoc'); // Corrected 'dropLoc' to 'droLoc'
 
-            var pickAutocomplete = new google.maps.places.Autocomplete(pickLocInput);
-            pickAutocomplete.setFields(['geometry']);
+			var pickAutocomplete = new google.maps.places.Autocomplete(pickLocInput);
+			pickAutocomplete.setFields(['geometry']);
 
-            var dropAutocomplete = new google.maps.places.Autocomplete(dropLocInput);
-            dropAutocomplete.setFields(['geometry']);
+			var dropAutocomplete = new google.maps.places.Autocomplete(dropLocInput);
+			dropAutocomplete.setFields(['geometry']);
 
-            // Event listener for place changed for pickup location
-            pickAutocomplete.addListener('place_changed', function() {
-                var place = pickAutocomplete.getPlace();
-                if (!place.geometry) {
-                    console.error("Autocomplete's returned place contains no geometry");
-                    return;
-                }
-                pickMarker.setLatLng([place.geometry.location.lat(), place.geometry.location.lng()]);
-                pickMap.setView([place.geometry.location.lat(), place.geometry.location.lng()], 13);
-            });
+			// Event listener for place changed for pickup location
+			pickAutocomplete.addListener('place_changed', function() {
+				var place = pickAutocomplete.getPlace();
+				if (!place.geometry) {
+					console.error("Autocomplete's returned place contains no geometry");
+					return;
+				}
+				pickMarker.setLatLng([place.geometry.location.lat(), place.geometry.location.lng()]);
+				pickMap.setView([place.geometry.location.lat(), place.geometry.location.lng()], 13);
+			});
 
-            // Event listener for place changed for dropoff location
-            dropAutocomplete.addListener('place_changed', function() {
-                var place = dropAutocomplete.getPlace();
-                if (!place.geometry) {
-                    console.error("Autocomplete's returned place contains no geometry");
-                    return;
-                }
-                dropMarker.setLatLng([place.geometry.location.lat(), place.geometry.location.lng()]);
-                dropMap.setView([place.geometry.location.lat(), place.geometry.location.lng()], 13);
-            });
-        }
+			// Event listener for place changed for dropoff location
+			dropAutocomplete.addListener('place_changed', function() {
+				var place = dropAutocomplete.getPlace();
+				if (!place.geometry) {
+					console.error("Autocomplete's returned place contains no geometry");
+					return;
+				}
+				dropMarker.setLatLng([place.geometry.location.lat(), place.geometry.location.lng()]);
+				dropMap.setView([place.geometry.location.lat(), place.geometry.location.lng()], 13);
+			});
+		}
 
-        // Initialize maps and autocomplete
-        document.addEventListener('DOMContentLoaded', function() {
-            initMaps();
-            setupAutocomplete();
-        });
-    </script>
+		// Initialize maps and autocomplete
+		document.addEventListener('DOMContentLoaded', function() {
+			initMaps();
+			setupAutocomplete();
+		});
+	</script>
 
     <footer>
 		<div class="footer_content">
