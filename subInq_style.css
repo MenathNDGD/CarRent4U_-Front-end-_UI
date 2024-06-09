@@ -34,7 +34,7 @@ nav {
     padding: 10px 15px;
 	position: fixed;
 	width: 100%;
-	z-index: 1;
+	z-index: 1000;
 }
 
 .logo {
@@ -233,6 +233,29 @@ form .buttons{
     color: rgb(255, 255, 255);
     visibility: hidden;
     transition: transform 0.5s, top 0.5s;
+}
+
+.map {
+    height: 300px;
+    margin-top: 10px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.popup.open-popup {
+    display: block;
 }
 
 .open-popup{
