@@ -485,3 +485,52 @@ footer {
         max-width: 500px;
     }
 }
+
+@media (max-width: 1024px) {
+    .fields {
+        flex-direction: column;
+    }
+
+    .inputField {
+        flex: 1 1 100%;
+        margin-right: 0;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    nav .logo {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    .submitCont {
+        margin: 80px 20px 50px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .submitCont header {
+        font-size: 24px;
+    }
+
+    .buttons button {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+}
