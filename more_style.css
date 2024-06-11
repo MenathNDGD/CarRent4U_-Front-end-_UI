@@ -1,12 +1,14 @@
 * {
-	margin: 0;
+    margin: 0;
     font-family: 'Playball', cursive, sans-serif;
 }
 
 body {
     margin: 0;
+    padding: 0;
     font-family: 'Playball', cursive, sans-serif;
     color: #333;
+    min-height: 100vh;
 }
 
 h2, h3, h4 {
@@ -32,9 +34,9 @@ nav {
     align-items: center;
     background-color: #333;
     padding: 10px 15px;
-	position: fixed;
-	width: 100%;
-	z-index: 1;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
 }
 
 .logo {
@@ -44,7 +46,7 @@ nav {
 }
 
 .logo:hover {
-	color: #e67e22;
+    color: #e67e22;
 }
 
 nav ul {
@@ -67,6 +69,19 @@ nav ul li a {
 nav ul li a:hover, .selected {
     background-color: #555;
     border-radius: 5px;
+}
+
+.menu-icon, .close-icon {
+    display: none;
+    font-size: 1.5em;
+    color: #fff;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.menu-icon:hover, .close-icon:hover {
+    transform: scale(1.2);
+    color: #e67e22;
 }
 
 .bg_image {
@@ -293,17 +308,51 @@ footer {
 }
 
 @media (max-width: 992px) {
-    .contTC, .section2 {
-        width: 95%;
-        padding: 1.5%;
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 60px;
+    }
+
+    .close-icon {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 65px;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 50px;
+        left: -100%;
+        width: 100%;
+        transition: left 0.3s ease;
     }
 
     nav ul li {
-        margin: 0 10px;
+        margin: 10px 0;
     }
 
     nav ul li a {
-        padding: 8px 10px;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul.show {
+        left: 0;
+    }
+
+    .contTC, .section2 {
+        width: 95%;
+        padding: 1.5%;
     }
 
     .bg_image h2 {
@@ -340,9 +389,42 @@ footer {
 }
 
 @media (max-width: 768px) {
-    nav {
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 60px;
+    }
+    
+    nav ul {
+        display: none;
         flex-direction: column;
-        align-items: flex-start;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+    }
+    
+    nav ul li {
+        margin: 20px 0;
+    }
+    
+    nav ul li a {
+        font-size: 1.5em;
+    }
+
+    .close-icon {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 65px;
+    }
+
+    nav ul.show {
+        display: flex;
     }
 
     .logo {
@@ -383,14 +465,50 @@ footer {
 }
 
 @media (max-width: 576px) {
+    .logo {
+        font-size: 1.2em;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 2px;
+        right: 60px;
+    }
+
+    .close-icon {
+        display: block;
+        position: absolute;
+        top: -5px;
+        right: 18px;
+    }
+
+    nav {
+        width: 82%;
+    }
+
     nav ul {
+        display: none;
         flex-direction: column;
-        width: 100%;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: #333;
+        width: 60%;
+        height: 100vh;
+        text-align: center;
+    }
+
+    nav ul.show {
+        display: flex;
     }
 
     nav ul li {
-        margin: 5px 0;
-        text-align: center;
+        margin: 15px 0;
+    }
+
+    nav ul li a {
+        font-size: 1.2em;
     }
 
     .bg_image {
