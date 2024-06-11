@@ -1,13 +1,22 @@
 $(document).ready(function(){
-    $(window).scroll(function(){
-        if ($(this).scrollTop() > 50) {
-            $('#topBtn').fadeIn();
-        } else {
-            $('#topBtn').fadeOut();
+    var $topBtn = $('#topBtn');
+    var scrollTimeout;
+
+    $(window).on('scroll', function(){
+        if (scrollTimeout) {
+            clearTimeout(scrollTimeout);
         }
+        scrollTimeout = setTimeout(function(){
+            if ($(window).scrollTop() > 50) {
+                $topBtn.fadeIn();
+            } else {
+                $topBtn.fadeOut();
+            }
+        }, 100);
     });
-    $('#topBtn').click(function(){
-        $('html, body').animate({scrollTop : 0},800);
+
+    $topBtn.on('click', function(){
+        $('html, body').animate({scrollTop : 0}, 800);
         return false;
     });
 });
