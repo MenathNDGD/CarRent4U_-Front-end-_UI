@@ -399,6 +399,21 @@ footer {
     }
 }
 
+@media (max-width: 1024px) {
+    .fields {
+        flex-direction: column;
+    }
+
+    .inputField {
+        flex: 1 1 100%;
+        margin-right: 0;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+}
+
 @media (max-width: 992px) {
     .menu-icon {
         display: block;
@@ -536,7 +551,7 @@ footer {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
     .logo {
         font-size: 1.2em;
     }
@@ -556,7 +571,7 @@ footer {
     }
 
     nav {
-        width: 82%;
+        width: 100%;
     }
 
     nav ul {
@@ -584,7 +599,8 @@ footer {
     }
 
     .submitCont {
-        padding: 20px;
+        width: 80%;
+        z-index: -1;
     }
 
     .submitCont header {
@@ -629,22 +645,11 @@ footer {
     }
 }
 
-@media (max-width: 1024px) {
-    .fields {
-        flex-direction: column;
-    }
-
-    .inputField {
-        flex: 1 1 100%;
-        margin-right: 0;
-    }
-
-    .buttons {
-        justify-content: center;
-    }
-}
-
 @media (max-width: 480px) {
+    .submitCont {
+        width: 70%;
+    }
+
     .submitCont header {
         font-size: 24px;
     }
