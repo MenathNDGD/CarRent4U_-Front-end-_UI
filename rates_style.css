@@ -334,6 +334,35 @@ footer {
         font-size: 1.2em;
     }
 
+    table {
+        width: 100%;
+    }
+
+    table #header th {
+        font-size: 28px;
+        padding: 6px;
+    }
+
+    table .subHeader {
+        font-size: 25px;
+        padding: 8px 0;
+    }
+
+    .rowData{
+        font-size: 18px;
+        padding: 6px 0;
+        font-weight: 600;
+    }
+
+    .rowHeader {
+        font-size: 20px;
+        padding: 12px 0;
+    }
+
+    .contTC {
+        width: 90%;
+    }
+
     .contTC .ContHeader {
         font-size: 1.8em;
     }
@@ -392,6 +421,35 @@ footer {
 
     .bg_image p {
         font-size: 1em;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    table #header th {
+        font-size: 25px;
+        padding: 6px;
+    }
+
+    table .subHeader {
+        font-size: 20px;
+        padding: 8px 0;
+    }
+
+    .rowData{
+        font-size: 15px;
+        padding: 6px 0;
+        font-weight: 600;
+    }
+
+    .rowHeader {
+        font-size: 18px;
+        padding: 12px 0;
+    }
+
+    .contTC {
+        width: 90%;
     }
 
     .contTC .ContHeader {
@@ -465,6 +523,7 @@ footer {
 
     .contTC {
         padding: 15px;
+        width: 90%;
     }
 
     .contTC .ContHeader {
@@ -475,12 +534,30 @@ footer {
         font-size: 1.1em;
     }
 
-	table {
-		max-width: 500px;
-	}
+	table #header th {
+        font-size: 20px;
+        padding: 6px;
+    }
+
+    table .subHeader {
+        font-size: 18px;
+        padding: 8px 0;
+    }
 
     table td {
-        font-size: 1.1em;
+        font-size: 15px;
+        padding: 6px 0;
+    }
+
+    .rowData{
+        font-size: 9px;
+        padding: 6px 0;
+        font-weight: 700;
+    }
+
+    .rowHeader {
+        font-size: 10px;
+        padding: 12px 0;
     }
 
     .footer_content h3 {
@@ -512,7 +589,7 @@ footer {
     }
 
     nav {
-        width: 82%;
+        width: 100%;
     }
 
     nav ul {
@@ -552,25 +629,48 @@ footer {
         font-size: 0.8em;
     }
 
-	#header {
-		font-size: 1.1em;
-	}
+    table {
+        width: 100%;
+    }
 
-	.subHeader {
-		font-size: 1em;
-	}
+    table #header th {
+        font-size: 10px;
+        padding: 6px;
+    }
 
-	.rowHeader {
-		font-size: 0.8em;
-	}
+    table .subHeader {
+        font-size: 12px;
+        padding: 8px 0;
+    }
+
+    table td {
+        font-size: 1em;
+        padding: 6px 0;
+    }
+
+    .rowData{
+        font-size: 9px;
+        padding: 6px 0;
+        font-weight: 600;
+    }
+
+    .rowHeader {
+        font-size: 10px;
+        padding: 12px 0;
+    }
+
+    table .btn {
+        display: none;
+    }
+
+    .contTC {
+        width: 80%;
+        padding: 10px;
+    }
 
     .container p {
         font-size: 1rem;
         padding: 0 15px;
-    }
-
-    .contTC {
-        padding: 10px;
     }
 
     .contTC .ContHeader {
@@ -581,19 +681,72 @@ footer {
         font-size: 0.9em;
     }
 
-	table {
-		max-width: 500px;
-	}
-
-    table td, table th {
-        font-size: 0.9em;
-    }
-
     .footer_content h3 {
         font-size: 1em;
     }
 
     .footer_content p {
         font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .bg_image {
+        padding: 50px 10px;
+    }
+
+    .bg_image h2 {
+        font-size: 2em;
+    }
+
+    .bg_image p {
+        font-size: 1.2em;
+    }
+
+    table {
+        max-width: 400px;
+    }
+
+    table #header th {
+        font-size: 10px;
+        padding: 6px;
+    }
+
+    table .subHeader {
+        font-size: 12px;
+        padding: 8px 0;
+    }
+
+    table td {
+        font-size: 1em;
+        padding: 6px 0;
+    }
+
+    .rowData{
+        font-size: 9px;
+        padding: 6px 0;
+        font-weight: 600;
+    }
+
+    .rowHeader {
+        font-size: 10px;
+        padding: 12px 0;
+    }
+
+    table .btn {
+        display: none;
+    }
+
+    .contTC {
+        width: 80%;
+    }
+
+    .contTC .contPara {
+        font-size: 18px;
+    }
+
+    .contTC .contList ul li {
+        font-size: 15px;
+        margin-left: -10%;
     }
 }
