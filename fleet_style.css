@@ -430,7 +430,7 @@ footer {
     }
 
     nav {
-        width: 82%;
+        width: 100%;
     }
 
     nav ul {
@@ -487,5 +487,12 @@ footer {
 
     .box .image {
         height: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .box .content h3 {
+        font-size: 1.4em;
+        margin-top: 20%;
     }
 }
